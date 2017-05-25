@@ -15,3 +15,11 @@ except:
     install('request')
     import kivy
 
+class ConfigWindow(kivy.Widget):
+    pass
+
+class ConfigTool(kivy.App):
+    def build(self):
+        return ConfigWindow()
+
+ConfigTool.run()
