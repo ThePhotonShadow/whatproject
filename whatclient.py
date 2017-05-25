@@ -1,25 +1,19 @@
 import pip
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.uix.button import Button
 
-def install(package):
-    pip.main(['install', package])
 
-try:
-    import kivy
-except:
-    install('kivy')
-    import kivy
+print('done installing')
 
-try:
-    import request
-except:
-    install('request')
-    import kivy
 
-class ConfigWindow(kivy.Widget):
-    pass
+class ConfigWindow(Widget):
+    def start_button(self):
+        print("JD Powah")
 
-class ConfigTool(kivy.App):
+
+class ConfigApp(App):
     def build(self):
         return ConfigWindow()
 
-ConfigTool.run()
+ConfigApp().run()
